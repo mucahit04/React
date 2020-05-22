@@ -1,0 +1,57 @@
+* {
+	margin: 0;
+	padding: 0;
+	background-color: #282c34;
+	color: white;
+}
+.App-header {
+	text-align: center;
+	font-size: 2.5em;
+}
+
+ul {
+	font-size: 1.5em;
+	margin: 3%;
+}
+
+.benefits-list {
+	width: 95%;
+	display: flex;
+	list-style-type: none;
+}
+.list-item {
+	width: 25%;
+	margin: auto;
+	text-align: center;
+}
+img {
+	margin: 1%;
+	width: 100px;
+}
+h3 {
+	text-decoration: underline;
+	margin: 1%;
+}
+button {
+	font-size: 0.7em;
+	width: 100%;
+	height: 50px;
+	background-color: green;
+}
+.resetBtn {
+	background-color: red;
+}
+.counter {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 50px;
+	width: 40%;
+	margin: auto;
+	border: 2px solid white;
+	border-radius: 5px;
+	padding: 2%;
+}
+.feedback {
+	font-size: 0.8em;
+	color: hotpink;
+}
