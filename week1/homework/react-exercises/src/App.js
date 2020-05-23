@@ -10,18 +10,21 @@ import Counter from "./components/Counter";
 const benefits = [
 	{
 		imgSrc: fdelivery,
+		alt: "A shipping truck",
 		title: "Free Shipping",
 		description:
 			"Phasellus ac fringilla sapien. Quisque hendrerit nisi eu ligula dictum, vitae molestie augue vehicula. Nunc accumsan lacus ac sem tincidunt ultrices. Nullam consequat ultricies arcu, et egestas augue sodales at.",
 	},
 	{
 		imgSrc: coin,
+		alt: "A USD coin above a hand",
 		title: "100% Money Back",
 		description:
 			"Phasellus ac fringilla sapien. Quisque hendrerit nisi eu ligula dictum, vitae molestie augue vehicula. Nunc accumsan lacus ac sem tincidunt ultrices. Nullam consequat ultricies arcu, et egestas augue sodales at.",
 	},
 	{
 		imgSrc: chat,
+		alt: "two chat balloons",
 		title: "Online support 24/7",
 		description:
 			"Phasellus ac fringilla sapien. Quisque hendrerit nisi eu ligula dictum, vitae molestie augue vehicula. Nunc accumsan lacus ac sem tincidunt ultrices. Nullam consequat ultricies arcu, et egestas augue sodales at.",
@@ -36,7 +39,7 @@ function App() {
 			<Hobbylist />
 			<ul className='benefits-list'>
 				{benefits.map(benefit => (
-					<Guarantee props={benefit} />
+					<Guarantee benefit={benefit} />
 				))}
 			</ul>
 			<Counter />
