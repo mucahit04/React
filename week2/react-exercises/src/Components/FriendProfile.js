@@ -27,18 +27,5 @@ export default function FriendProfile({ friend }) {
 				</h5>
 			</div>
 		</div>
-		// <ul className='friend-profile'>
-		// 	<li>
-		// 		Name: {first} {last}
-		// 	</li>
-		// 	<li>
-		// 		Address:{street.name},{street.number}, {postcode}
-		// 	</li>
-		// 	<li>
-		// 		{city}, {country}
-		// 	</li>
-		// 	<li>e-mail: {friend.email}</li>
-		// 	<li>Phone:{friend.phone}</li>
-		// </ul>
 	);
 }

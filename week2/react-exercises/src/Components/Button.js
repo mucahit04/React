@@ -3,7 +3,7 @@ import React from "react";
 export default function Button({ getFriend }) {
 	return (
 		<div>
-			<button className='NewUserButton' onClick={() => getFriend()}>
+			<button className='button' onClick={() => getFriend()}>
 				Get a friend!
 			</button>
 		</div>

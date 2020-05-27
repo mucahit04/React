@@ -26,12 +26,13 @@ export default function Friend() {
 		<div>
 			{isLoading && (
 				<img
-					className='loading-message'
+					className='loading-gif'
 					src='https://media.tenor.com/images/434fb77a61338f959ba7e16251f199de/tenor.gif'
 					alt='loading gif'
 				/>
 			)}
 			<Button getFriend={getFriend} />
+			{!friend.name && <p>Get a friend by clicking the button!</p>}
 			{!isLoading && friend.name && <FriendProfile friend={friend} />}
 			{hasError && <p> Ooops</p>}
 		</div>

@@ -39,7 +39,6 @@ h5 {
 	border-radius: 10px;
 	box-shadow: 5px 5px 30px black;
 	margin: auto;
-	margin-top: 2%;
 	background: #0c2b5e; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, #0c2b5e, #173c77); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(
@@ -88,7 +87,7 @@ h5 {
 	border-radius: 3px;
 }
 
-.NewUserButton {
+.button {
 	background: #ff512f; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #dd2476, #ff512f); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(
@@ -103,6 +102,7 @@ h5 {
 	border: none;
 	margin: auto;
 	margin-top: 2%;
+	margin-bottom: 2%;
 	box-shadow: 15px 15px 40px black;
 	outline: none;
 	font-family: inherit;
@@ -110,7 +110,7 @@ h5 {
 	font-weight: bold;
 }
 
-.NewUserButton:hover {
+.button:hover {
 	background: #ff512a; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #dd2476, #ffa000); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(
@@ -120,4 +120,25 @@ h5 {
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	transform: scale(1.02);
 	box-shadow: 20px 20px 50px black;
+}
+
+.dog-gallery {
+	display: flex;
+	align-items: center;
+	margin: 2%;
+	flex-wrap: wrap;
+}
+.dog-div {
+	margin: 1%;
+}
+.dog-div img {
+	width: 300px;
+	height: 300px;
+	border-radius: 10px;
+}
+
+.loading-gif {
+	border-radius: 10px;
+	margin: 1%;
+	width: 200px;
 }
