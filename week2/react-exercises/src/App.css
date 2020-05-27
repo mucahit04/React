@@ -142,3 +142,14 @@ h5 {
 	margin: 1%;
 	width: 200px;
 }
+.mainDiv-joke {
+	width: 50%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 5px 5px 30px black;
+	margin: auto;
+	padding: 2%;
+	background: #0c2b5e;
+	font-size: 1.1em;
+	font-weight: bold;
+}
