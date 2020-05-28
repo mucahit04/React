@@ -8,15 +8,19 @@ function RandomJoke() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const apiUrl = "https://official-joke-api.appspot.com/random_joke";
-			const res = await fetch(apiUrl);
-			if (res.status !== 200) {
-				setError("oh no the fun has not arrived :(");
-				setIsLoading(false);
-			} else {
-				const data = await res.json();
-				setJoke(data);
-				setIsLoading(false);
+			try {
+				const apiUrl = "https://official-joke-api.appspot.com/random_joke";
+				const res = await fetch(apiUrl);
+				if (!res.ok) {
+					setError(true);
+					setIsLoading(false);
+				} else {
+					const data = await res.json();
+					setJoke(data);
+					setIsLoading(false);
+				}
+			} catch (error) {
+				setError(true);
 			}
 		};
 		fetchData();
@@ -24,7 +28,7 @@ function RandomJoke() {
 
 	return (
 		<div className='mainDiv-joke'>
-			{error && error}
+			{error && <p>Oh no! The fun couldn't arrived</p>}
 			{isLoading && !error && <p>"Loading your joke"</p>}
 			{!error && joke.setup && <Joke joke={joke} />}
 		</div>
