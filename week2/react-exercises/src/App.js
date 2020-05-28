@@ -3,7 +3,6 @@ import "./App.css";
 import Friend from "./Components/Friend";
 import DogGallery from "./Components/DogGallery";
 import RandomJoke from "./Components/RandomJoke";
-// import Test from "./Components/Test";
 
 function App() {
 	function refreshPage() {
