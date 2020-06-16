@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CityItem from "./CityItem";
 
 export default function Search() {
@@ -7,24 +7,25 @@ export default function Search() {
 	const [cityName, setCityName] = useState("");
 	const [cityData, setCityData] = useState({});
 	const [status, setStatus] = useState();
-
-	const fetchCityWeather = async () => {
-		setStatus("loading");
-		try {
-			const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
-			const res = await fetch(apiUrl);
-			if (!res.ok) {
+	const [url, setUrl] = useState();
+	useEffect(() => {
+		const fetchCityWeather = async () => {
+			setStatus("loading");
+			try {
+				const res = await fetch(url);
+				if (!res.ok) {
+					setStatus("error");
+				} else {
+					setStatus("success");
+					const data = await res.json();
+					setCityData(data);
+				}
+			} catch (error) {
 				setStatus("error");
-			} else {
-				setStatus("success");
-				const data = await res.json();
-				setCityData(data);
 			}
-		} catch (error) {
-			setStatus("error");
-		}
-	};
-
+		};
+		fetchCityWeather();
+	}, [url]);
 	return (
 		<>
 			<div className='search-div'>
@@ -41,7 +42,13 @@ export default function Search() {
 						setCityName(value);
 					}}
 				/>
-				<button onClick={() => fetchCityWeather()}>Search</button>
+				<button
+					onClick={() =>
+						setUrl(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`)
+					}
+				>
+					Search
+				</button>
 
 				{status === "success" && cityData.name && (
 					<div className='city-item'>
